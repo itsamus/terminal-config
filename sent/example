@@ -1,0 +1,14 @@
+Voorbeeld gemaakt door:
+itsamus
+
+een lege slide wordt gemaakt door
+een \ als paraaf te gebruiken
+\
+of als een witregel in een slide
+
+# zinnen die beginnen met een # worden genegeerd als ze in een paraaf staan
+@nyan.png
+alle tekst wat in deze paraaf komt wordt geskipped omdat het begint met @
+@ deze tekst dus ook
+
+hier wordt de tekst weer weergegeven @@@@@

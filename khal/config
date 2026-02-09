@@ -1,0 +1,190 @@
+##   _    _           _                        __ _
+##  | | _| |__   __ _| |       ___ ___  _ __  / _(_) __ _
+##  | |/ / '_ \ / _` | |      / __/ _ \| '_ \| |_| |/ _` |
+##  |   <| | | | (_| | |  _  | (_| (_) | | | |  _| | (_| |
+##  |_|\_\_| |_|\__,_|_| (_)  \___\___/|_| |_|_| |_|\__, |
+##                                                 /____/
+# For more details, refer to the official documentation:
+# https://khal.org/docs/en/stable/configure.html
+[calendars]
+
+  [[home]]
+    path = ~/.config/khal/calendars/home/
+    color = 190
+    priority = 20
+    # Optional: Associate email addresses for PARTSTAT tracking
+    # addresses = user@example.com
+
+  [[work]]
+    path = ~/.config/khal/calendars/work/
+    color = 46
+    priority = 10
+#    readonly = True # Set to True if this calendar should not be modified by khal
+#    # addresses = work@example.com
+
+  # Example of a 'discover' type calendar for multiple vdirs in one path
+  # If you have multiple vdirs under ~/.calendars/ (e.g., ~/.calendars/personal, ~/.calendars/family)
+  # [[all_calendars]]
+  #   path = ~/.calendars/*
+  #   type = discover
+  #   color = auto # 'auto' will try to read color from a color file in each vdir
+
+[default]
+  # Default settings for new events and general behavior
+
+  # The calendar to use if none is specified when creating a new event
+  default_calendar = home
+
+  # Default alarm for new all-day events (e.g., '12h', '30m')
+  # default_dayevent_alarm = 12h
+
+  # Default duration for new all-day events ('1d' is 1 day)
+  default_dayevent_duration = 1d
+
+  # Default alarm for new events (e.g., '15m', '2h')
+  # default_event_alarm = 15m
+
+  # Default duration for new events ('1h' is 1 hour)
+  default_event_duration = 24h
+
+  # Whether the mouse should be enabled in interactive mode (ikhal)
+
+
+  # If true, khal will highlight days with events in the calendar view
+  highlight_event_days = True
+
+  # What should be printed after adding a new event: 'event', 'path', or 'False'
+  print_new = False
+
+  # By default, only days with events are shown in list/calendar view. Set to True to show all days.
+  show_all_days = False
+
+  # Controls for how many days into the future events are shown by default (e.g., '2d', '1w')
+  timedelta = 2d
+
+[highlight_days]
+  # Settings for highlighting days with events, if highlight_event_days is True
+
+  # Color to use for highlighting. Can be a named color, 0-255 index, or '#RRGGBB'.
+  # Set to '' to use the calendar's color.
+  color = ''
+
+  # Default color for calendars without a specific color defined.
+  # Set to '' to disable highlighting for events that would use the default color.
+  default_color = dark gray
+
+  # Highlighting method: 'foreground' (fg) or 'background' (bg)
+  method = fg
+
+  # How to color days with events from multiple calendars.
+  # Set to '' to use the calendars' colors.
+  multiple = yellow
+
+  # If 'multiple' is set to a specific color, setting this to True will
+  # only apply that color for days with events from 3 or more calendars.
+  multiple_on_overflow = False
+
+[keybindings]
+  # Custom keybindings for ikhal.
+  # You can bind multiple keys with a comma-separated list.
+  # For key combinations, use a space (e.g., 'ctrl n').
+
+  delete = d
+  down = down, j
+  duplicate = p
+  export = e
+  external_edit = meta E
+  left = left, h, backspace
+  log = L
+  mark = v
+  new = n
+  other = o
+  quit = q, Q
+  right = right, l, space
+  save = meta enter
+  search = /
+  today = t
+  up = up, k
+  view = enter
+
+[locale]
+  # Localization settings. (long)date-, time-, and datetimeformat are mandatory.
+
+  # Date format (see `man strftime` for formatting codes)
+  dateformat = %d-%m-
+
+  # Datetime format
+  datetimeformat = %d.%m. %H:%M
+
+  # Default timezone for new events and when khal cannot understand an iCalendar timezone.
+  default_timezone = Europe/Amsterdam
+
+  # First day of the week (0 for Monday, 6 for Sunday)
+  firstweekday = 0
+
+  # Local timezone for displaying events.
+  local_timezone = Europe/Amsterdam
+
+  # Long date format (should include year)
+  longdateformat = %d-%m-%Y
+
+  # Long datetime format (should include year)
+  longdatetimeformat = %d-%m-%Y %H:%M
+
+  # Time format
+  timeformat = %H:%M
+
+  # Use Unicode symbols for indicators (e.g., repeating events). Set to False for ASCII alternatives.
+  unicode_symbols = True
+
+  # Enable weeknumbers in calendar/ikhal mode: 'left', 'right', or 'off'
+  # Only works properly if firstweekday is 0.
+  weeknumbers = left
+
+
+
+[sqlite]
+  # Path to khal's internal caching database.
+  # Default is ~/.local/share/khal/khal.db
+  # path = ~/.local/share/khal/khal.db
+
+[view]
+  # Configuration options for visual appearance
+
+  # Format for each day header in agenda view
+  agenda_day_format = "{bold}{name}, {date-long}{reset}"
+
+  # Default formatting for events in list/calendar/ikhal views.
+  # Color styling is ignored in ikhal.
+  agenda_event_format = {calendar-color}{cancelled}{start-end-time-style} {title}{repeat-symbol}{alarm-symbol}{description-separator}{description}{reset}
+
+  # Add a blank line before the name of the day (khal only)
+  blank_line_before_day = False
+
+  # Whether to use bold text for light colors. Set to False if light colors appear too bright.
+  bold_for_light_color = True
+
+  # Defines behavior of ikhal's right column. True: shows events for as many days as fit.
+  # False: fixed (default timedelta) amount of days' events.
+  dynamic_days = True
+
+  # Default formatting for events when start/end dates are not clear (e.g., search results).
+  event_format = {calendar-color}{cancelled}{start}-{end} {title}{repeat-symbol}{alarm-symbol}{description-separator}{description}{reset}
+
+  # Set to true to always show the event view window in ikhal.
+  event_view_always_visible = False
+
+  # Weighting for the event view window (relative size).
+  event_view_weighting = 1
+
+  # Frame style: False, 'width', 'color', or 'top'.
+  frame = False
+
+  # Minimum number of months displayed by the `calendar` command.
+
+
+  # Display month name on row: 'firstday' or 'firstfullweek'.
+  monthdisplay = firstday
+
+  # Choose a color theme: 'dark' or 'light'. Custom themes can be defined in [palette].
+  theme = dark

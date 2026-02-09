@@ -1,0 +1,100 @@
+
+# ~/.config/eza/theme.yml
+
+extensions:
+  txt:
+    icon: { glyph: "Τ" }
+  md:
+    icon: { glyph: "❓" }
+  yml:
+    icon: { glyph: "📜" }
+  yaml:
+    icon: { glyph: "📜" }
+  py:
+    icon: { glyph: "📜" }
+  java:
+    icon: { glyph: "♨" }
+  sh:
+    icon: { glyph: "📜" }
+  fish:
+    icon: { glyph: "📜" }
+  bash:
+    icon: { glyph: "📜" }
+  zsh:
+    icon: { glyph: "📜" }
+  ksh:
+    icon: { glyph: "📜" }
+  awk:
+    icon: { glyph: "♨" }
+  diff:
+    icon: { glyph: "♨" }
+  db:
+    icon: { glyph: "♨" }
+  sql:
+    icon: { glyph: "♨" }
+  go:
+    icon: { glyph: "♨" }
+  sln:
+    icon: { glyph: "♨" }
+  pm:
+    icon: { glyph: "♨" }
+  rss:
+    icon: { glyph: "♨" }
+  vim:
+    icon: { glyph: "♨" }
+  elm:
+    icon: { glyph: "♨" }
+  tar:
+    icon: { glyph: "📦" }
+  taz:
+    icon: { glyph: "📦" }
+  lha:
+    icon: { glyph: "📦" }
+  lzh:
+    icon: { glyph: "📦" }
+  zip:
+    icon: { glyph: "📦" }
+  deb:
+    icon: { glyph: "📦" }
+  rpm:
+    icon: { glyph: "📦" }
+  rar:
+    icon: { glyph: "📦" }
+  7z:
+    icon: { glyph: "📦" }
+  wim:
+    icon: { glyph: "📦" }
+  swm:
+    icon: { glyph: "📦" }
+  jpg:
+    icon: { glyph: "📷" }
+  jpeg:
+    icon: { glyph: "📷" }
+  gif:
+    icon: { glyph: "📷" }
+  bmp:
+    icon: { glyph: "📷" }
+  png:
+    icon: { glyph: "📷" }
+  svg:
+    icon: { glyph: "📷" }
+  ogm:
+    icon: { glyph: "📷" }
+  mp4:
+    icon: { glyph: "📷" }
+  avi:
+    icon: { glyph: "📷" }
+  aac:
+    icon: { glyph: "🔊" }
+  m4a:
+    icon: { glyph: "🔊" }
+  mp3:
+    icon: { glyph: "🔊" }
+  ogg:
+    icon: { glyph: "🔊" }
+  wav:
+    icon: { glyph: "🔊" }
+  pdf:
+    icon: { glyph: "💾" }
+
+

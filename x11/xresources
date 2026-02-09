@@ -1,0 +1,17 @@
+!   .Xresorces wordt gebruikt om de opmaak van X-Applicaties te veranderen.
+!       Je kan X applicaties speciek opmaken met lokale instellingen of alle
+!       applicaties global opmaken. Basiscly komt het er op neer dat dit bestand
+!       gebruikt wordt voor de opmaak en weergave van X applicaties.
+
+!   ---[ Global settings    ]---------------------------------------------
+    *savelines   : 30000
+
+    Xft.dpi         : 96
+    Xft.antialias   :  1
+    Xft*hinting     :  1
+    Xft.hinting     :  1
+    Xft.rgba        : rgb
+    Xft.lcdfilter   : lcddefault
+    Xft.hintstyle   : hintsfull
+    *background      : #000000
+    *foreground      : #FF0033

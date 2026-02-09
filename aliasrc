@@ -1,0 +1,82 @@
+
+##                                          _ _
+##                                     __ _| (_) __ _ ___ _ __ ___
+##                                    / _` | | |/ _` / __| '__/ __|
+##                                   | (_| | | | (_| \__ \ | | (__
+##                                    \__,_|_|_|\__,_|___/_|  \___|
+##  ===============================================================================================
+#   TITLE : aliasrc
+#   ABOUT : My alliasses for in the terminal.
+#   LINKS : -
+##  ===============================================================================================
+
+##  ---[ Sudo aliasses    ]----------------------------------------------------------------------///
+    alias \
+        nala="sudo nala" \
+        update="sudo nala update && sudo nala upgrade"
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ XDG aliasses     ]----------------------------------------------------------------------///
+    alias \
+        scripts="$XDG_SCRIPTS" \
+        conf="$XDG_CONFIG_HOME" \
+        cache="$XDG_CONFIG_CACHE"
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ Regular aliasses ]----------------------------------------------------------------------///
+    alias \
+        n="nvim" \
+        ~="$HOME" \
+        c="clear" \
+        mv="mv -i" \
+        cp="cp -i" \
+        h="history" \
+        calc="qalc" \
+        cpan="cpanm" \
+        bat="batcat" \
+        rm="rm -rfi" \
+        +x="chmod +x" \
+        repgrep="rgr" \
+        hist="history" \
+        news="newsboat" \
+        agenda="calcurse"\
+        void="$HOME/void" \
+        box="boxes -d html" \
+        weer="curl wttr.in/Edam" \
+        nali="nvim $XDG_CONFIG_HOME/aliasrc" \
+        gemini="cd ~ ; nvm use 20 ; gemini && cd -" \
+        systemcheat="nvim $HOME/.help/cheatsheet-system-cmds.sh" \
+        systemcheats="nvim $HOME/.help/cheatsheet-system-cmds.sh" \
+        env="env | grep -v -E 'EZA_COLORS|LS_COLORS|PATH|XDG' | sort" \
+        tree="LC_COLLATE=C tree -L 3 -alC --ignore-case --noreport --filesfirst" \
+        rct="/home/itsamus/.config/OpenRCT2/OpenRCT2-v0.4.29-linux-x86_64.AppImage"
+
+     #   -x="chmod -x" \ > made a function of this
+     #   lsa='LC_COLLATE=C eza -A --icons=auto' \
+     #   lsa='LC_COLLATE=C ls -A --color=always --group-directories-first' \
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ Git              ]----------------------------------------------------------------------///
+    alias \
+        gs="git status"
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ Scripts          ]----------------------------------------------------------------------///
+    alias \
+        cal="/home/itsamus/.scripts/cal.py" \
+        abook="/home/itsamus/.scripts/abook" \
+        zara="/home/itsamus/.scripts/zara.sh" \
+        tmux="/home/itsamus/.scripts/tmux-whiptail.sh" \
+        fish="perl /home/itsamus/.scripts/asciiquarium" \
+        textbox="/home/itsamus/.scripts/textbox.sh" \
+        nano216="/home/itsamus/.scripts/nano216.sh" \
+        figletbox="/home/itsamus/.scripts/figletbox.sh" \
+        fileheader="/home/itsamus/.scripts/fileheader.sh"
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ CD               ]----------------------------------------------------------------------///
+    alias \
+        ..="cd .." \
+        ...="cd ../.." \
+        ....="cd ../../.." \
+        .....="cd ../../../.." \
+        ......="cd ../../../../.." \
+        .......="cd ../../../../../.."  \
+        ........="cd ../../../../../../.."
+##  ---------------------------------------------------------------------------------------------\\\
+

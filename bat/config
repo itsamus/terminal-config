@@ -1,0 +1,15 @@
+
+#--color=always
+#--color=auto
+--theme="itsamus-theme"
+--italic-text=always
+--tabs 4
+--terminal-width 157
+--style="changes,header,snip,grid"
+--paging=never
+#--diff
+#--diff-context <N>
+#--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
+#--map-syntax "*.ino:C++"
+#--map-syntax ".ignore:Git Ignore"
+

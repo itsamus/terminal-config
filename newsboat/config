@@ -1,0 +1,737 @@
+
+##                                                     _                 _
+##                             _ __   _____      _____| |__   ___   __ _| |_
+##                            | '_ \ / _ \ \ /\ / / __| '_ \ / _ \ / _` | __|
+##                            | | | |  __/\ V  V /\__ \ |_) | (_) | (_| | |_
+##                            |_| |_|\___| \_/\_/ |___/_.__/ \___/ \__,_|\__|
+##  ===============================================================================================
+#   TITLE : config (newsboat)
+#   ABOUT : Configutation for newsboat
+#   LINKS : -
+##  ===============================================================================================
+
+##  ---[ Overall Settings ]----------------------------------------------------------------------///
+    confirm-exit no
+    datetime-format " %d-%m "
+    delete-read-articles-on-quit no
+    goto-first-unread yes
+    history-limit 0
+    help-title-format "                                                                                  HELP"
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ Feeds            ]----------------------------------------------------------------------///
+    always-display-description yes
+    article-sort-order date
+    auto-reload yes
+    bookmark-autopilot yes
+    bookmark-interactive no
+    feedlist-format "%11u  %n - %t"
+    feedlist-title-format "                                                                         RSS Newsfeed for itsamus"
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ Cache            ]----------------------------------------------------------------------///
+    cache-file "/home/itsamus/.cache/newsboat/cache.db"
+    cleanup-on-quit yes
+    cookie-cache ""
+
+##  ---------------------------------------------------------------------------------------------\\\
+##  ---[ Colors           ]----------------------------------------------------------------------///
+    color background white black
+    color listnormal white black
+    color end-of-text-marker black black
+    color article white black
+    color info white black
+
+##  ---------------------------------------------------------------------------------------------\\\
+#
+#   filebrowser-title-format (parameters: <format>; default value: "%N %V - %?O?Open File&Save File? - %f")
+#   Format of the title in file browser. See "Format Strings" section of Newsboat manual for details on available formats. (example: filebrowser-title-format
+#   "%?O?Open File&Save File? - %f")
+#
+
+#   html-renderer (parameters: <command>; default value: internal)
+#   If set to internal, then the internal HTML renderer will be used. Otherwise, the specified command will be executed, the HTML to be rendered will be written
+#   to the command’s stdin, and the program’s output will be displayed. This makes it possible to use other, external programs, such as w3m, links or lynx, to
+#   render HTML. (example: html-renderer "w3m -dump -T text/html")
+#
+#   http-auth-method (parameters: <method>; default value: any)
+#   Set HTTP authentication method. Allowed values: any, basic, digest, digest_ie (only available with libcurl 7.19.3 and newer), gssnegotiate, ntlm and
+#   anysafe. (example: http-auth-method digest)
+#
+#
+
+#   itemview-title-format (parameters: <format>; default value: "%N %V - Article '%T' (%u unread, %t total)")
+#   Format of the title in article view. See "Format Strings" section of Newsboat manual for details on available formats. (example: itemview-title-format
+#   "Article '%T'")
+#
+#   inoreader-app-id (parameters: <string>; default value: "")
+#   Unique application ID issued by Inoreader. See "Inoreader" section. (example: inoreader-app-id "123456789")
+#
+#   inoreader-app-key (parameters: <string>; default value: "")
+#   Application key issued by Inoreader. See "Inoreader" section. (example: inoreader-app-key "TmV3c2JvYXQgcm9ja3MgOikK")
+#
+#   inoreader-flag-share (parameters: <flag>; default value: "")
+#   If set and Inoreader support is used, then all articles that are flagged with the specified flag are being "shared" in Inoreader so that people that follow
+#   you can see it. (example: inoreader-flag-share "a")
+#
+#   inoreader-flag-star (parameters: <flag>; default value: "")
+#   If set and Inoreader support is used, then all articles that are flagged with the specified flag are being "starred" in Inoreader and appear in the list of
+#   "Starred items". (example: inoreader-flag-star "b")
+#
+#   inoreader-login (parameters: <login>; default value: "")
+#   This variable sets your Inoreader login for Inoreader support. (example: inoreader-login "your-login")
+#
+#   inoreader-min-items (parameters: <number>; default value: 20)
+#   This variable sets the number of articles that are loaded from Inoreader per feed. (example: inoreader-min-items 100)
+#
+#   inoreader-password (parameters: <password>; default value: "")
+#   This variable sets your Inoreader password for Inoreader support. Double quotes should be escaped, i.e. you should write \" instead of ". (example:
+#   inoreader-password "here_goesAquote:\"")
+#
+#   inoreader-passwordfile (parameters: <path>; default value: "")
+#   A more secure alternative to the above, by storing your password elsewhere in your system. (example: inoreader-passwordfile "~/.newsboat/inoreader-pw.txt")
+#
+#   inoreader-passwordeval (parameters: <command>; default value: "")
+#   Another secure alternative, is providing your password from an external command that is evaluated during login. This can be used to read your password from
+#   a gpg encrypted file or your system keyring. (example: inoreader-passwordeval "gpg --decrypt ~/.newsboat/inoreader-password.gpg")
+#
+#   inoreader-show-special-feeds (parameters: [yes/no]; default value: yes)
+#   If set and Inoreader support is used, then "special feeds" like "Starred items" (your starred articles) and "Shared items" (your shared articles) appear in
+#   your subscription list. (example: inoreader-show-special-feeds "no")
+#
+#   keep-articles-days (parameters: <number>; default value: 0)
+#   If set to a number greater than 0, only articles that were published within the last <number> days are kept, and older articles are deleted. If set to 0,
+#   this option is not active. Note that changing this setting won’t bring back the articles that were deleted earlier; currently, there’s no non-hacky way to
+#   bring back deleted articles. (example: keep-articles-days 30)
+#
+#   macro (parameters: <macro key> <command list>; default value: n/a)
+#   With this command, you can define a macro key and specify a list of commands that shall be executed when the macro prefix and the macro key are pressed.
+#   (example: macro k open; reload; quit)
+#
+#
+#   max-browser-tabs (parameters: <number>; default value: 10)
+#   Set the maximum number of articles to open in a browser when using the open-all-unread-in-browser or open-all-unread-in-browser-and-mark-read commands.
+#   (example: max-browser-tabs 4)
+#
+#   max-items (parameters: <number>; default value: 0)
+#   Set the number of articles to maximally keep per feed. If the number is set to 0, then all articles are kept. (example: max-items 100)
+#
+#   miniflux-login (parameters: <username>; default value: "")
+#   Sets the username for use with Miniflux. (example: miniflux-login "admin")
+#
+#   miniflux-password (parameters: <password>; default value: "")
+#   Configures the password for use with Miniflux. Double quotes should be escaped, i.e. you should write \" instead of ". (example: miniflux-password
+#   "here_goesAquote:\"")
+#
+#   miniflux-passwordfile (parameters: <path>; default value: "")
+#   A more secure alternative to the above, by storing your password elsewhere in your system. (example: miniflux-passwordfile "~/.newsboat/miniflux-pw.txt")
+#
+#   miniflux-passwordeval (parameters: <command>; default value: "")
+#   Another secure alternative, is providing your password from an external command that is evaluated during login. This can be used to read your password from
+#   a gpg encrypted file or your system keyring. (example: miniflux-passwordeval "gpg --decrypt ~/.newsboat/miniflux-password.gpg")
+#
+#   miniflux-url (parameters: <url>; default value: "")
+#   Configures the URL where the Miniflux installation you want to use resides. (example: miniflux-url "https://example.com/miniflux/")
+#
+#   notify-always (parameters: [yes/no]; default value: no)
+#   If set to no, notifications will only be made when there are new feeds or articles. If set to yes, notifications will be made regardless. (example:
+#   notify-always yes)
+#
+#   notify-beep (parameters: [yes/no]; default value: no)
+#   If set to yes, then the speaker will beep on new articles. (example: notify-beep yes)
+#
+#   notify-format (parameters: <string>; default value: "newsboat: finished reload, %f unread feeds (%n unread articles total)")
+#   Format string that is used for formatting notifications. See the chapter on format strings for more information. (example: notify-format "%d new articles
+#   (%n unread articles, %f unread feeds)")
+#
+#   notify-program (parameters: <command>; default value: "")
+#   If set, then the configured program will be executed if new articles arrived (through a reload) or if notify-always is yes. The first parameter of the
+#   called program contains the notification message. In order to pass other hard-coded arguments to the program, write an appropriate wrapper shell script and
+#   use it as <command> instead. (example: notify-program "~/bin/my-notifier")
+#
+#   notify-screen (parameters: [yes/no]; default value: no)
+#   If set to yes, then a "privacy message" will be sent to the terminal, containing a notification message about new articles. This is especially useful if you
+#   use terminal emulations such as GNU screen which implement privacy messages. (example: notify-screen yes)
+#
+#   notify-xterm (parameters: [yes/no]; default value: no)
+#   If set to yes, then the xterm window title will be set to a notification message about new articles. (example: notify-xterm yes)
+#
+
+#   openbrowser-and-mark-jumps-to-next-unread (parameters: [yes/no]; default value: no)
+#   If set to yes, jump to the next unread item when an item is opened in the browser and marked as read. (example: openbrowser-and-mark-jumps-to-next-unread
+#   yes)
+#
+
+#   pager (parameters: [<command>/internal]; default value: internal)
+#   If set to internal, then the internal pager will be used. Otherwise, the article to be displayed will be rendered to be a temporary file and then displayed
+#   with the configured pager. If the command is set to an empty string, the content of the PAGER environment variable will be used. If the command contains a
+#   placeholder %f, it will be replaced with the temporary filename. (example: pager "less %f")
+#
+
+#   prepopulate-query-feeds (parameters: [yes/no]; default value: no)
+#   If set to yes, then all query feeds are prepopulated with articles on startup. (example: prepopulate-query-feeds yes)
+#
+
+#   refresh-on-startup (parameters: [yes/no]; default value: no)
+#   If set to yes, then all feeds will be reloaded when newsboat starts up. This is equivalent to the -r commandline option. (example: refresh-on-startup yes)
+#
+#   reload-only-visible-feeds (parameters: [yes/no]; default value: no)
+#   If set to yes, then manually reloading all feeds will only reload the currently visible feeds, e.g. if a filter or a tag is set. (example:
+#   reload-only-visible-feeds yes)
+#
+#
+#
+#   reset-unread-on-update (parameters: <url> [<url>...]; default value: n/a)
+#   Specifies one or more feed URLs for whose articles the unread flag will be reset if an article has been updated, i.e. its content has been changed. This is
+#   especially useful for RSS feeds where single articles are updated after publication, and you want to be notified of the updates. This option can be
+#   specified multiple times. (example: reset-unread-on-update "https://blog.fefe.de/rss.xml?html")
+#
+#   run-on-startup (parameters: <list of operations>; default value: n/a)
+#   Specifies one or more operations, separated by semicolons, which are executed on Newsboat startup. (example: run-on-startup next-unread; open;
+#   random-unread; open)
+#
+#   save-path (parameters: <path-to-directory>; default value: ~/)
+#   The default path where articles shall be saved to. If an invalid path is specified, the current directory is used. (example: save-path "~/Saved Articles")
+#
+#   scrolloff (parameters: <number>; default value: 0)
+#   Keep the configured number of lines above and below the selected item in lists. Configure a high number to keep the selected item in the center of the
+#   screen. (example: scrolloff 5)
+#
+
+#   searchresult-title-format (parameters: <format>; default value: "%N %V - Search results (%u unread, %t total)%?F? matching filter `%F'&?")
+#   Format of the title in search result. See "Format Strings" section of Newsboat manual for details on available formats. (example: searchresult-title-format
+#   "Search result")
+#
+#   selectfilter-title-format (parameters: <format>; default value: "%N %V - Select Filter")
+#   Format of the title in filter selection dialog. See "Format Strings" section of Newsboat manual for details on available formats. (example:
+#   selectfilter-title-format "Select Filter")
+#
+#   selecttag-format (parameters: <format>; default value: "%4i  %T (%u)")
+#   Format of the lines in "Select tag" dialog. See the respective section in the documentation for more information on format strings. (example:
+#   selecttag-format "[%2i] %T (%n unread articles in %f feeds, %u feeds total)")
+#
+#   selecttag-title-format (parameters: <format>; default value: "%N %V - Select Tag")
+#   Format of the title in tag selection dialog. See "Format Strings" section of Newsboat manual for details on available formats. (example:
+#   selecttag-title-format "Select Tag")
+#
+#   show-keymap-hint (parameters: [yes/no]; default value: yes)
+#   If set to no, then the keymap hints on the bottom of screen will not be displayed. (example: show-keymap-hint no)
+#
+#   show-title-bar (parameters: [yes/no]; default value: yes)
+#   If set to no, then the title bar on the top of the screen will not be displayed. (example: show-title-bar no)
+#
+#   show-read-articles (parameters: [yes/no]; default value: yes)
+#   If set to yes, then all articles of a feed are listed in the article list. If set to no, then only unread articles are listed. (example: show-read-articles
+#   no)
+#
+#   show-read-feeds (parameters: [yes/no]; default value: yes)
+#   If set to yes, then all feeds, including those without unread articles, are listed. If set to no, then only feeds with one or more unread articles are list.
+#   (example: show-read-feeds no)
+#
+#   suppress-first-reload (parameters: [yes/no]; default value: no)
+#   If set to yes, then the first automatic reload will be suppressed if auto-reload is set to yes. (example: suppress-first-reload yes)
+#
+#   swap-title-and-hints (parameters: [yes/no]; default value: no)
+#   If set to yes, then the title at the top of screen and keymap hints at the bottom of screen will be swapped. (example: swap-title-and-hints yes)
+#
+#   text-width (parameters: <number>; default value: 0)
+#   If set to a number greater than 0, all HTML will be rendered to this maximum line length or the terminal width (whichever is smaller). If set to 0, the
+#   terminal width will always be used. Does not apply when using external renderer or viewing the source. Also note that "Link" header and "Links" section
+#   won’t be affected by it—they contain URLs which are better not wrapped. (example: text-width 72)
+#
+#   toggleitemread-jumps-to-next-unread (parameters: [yes/no]; default value: no)
+#   If set to yes, jump to the next unread item when an item’s read status is toggled in the article list. (example: toggleitemread-jumps-to-next-unread yes)
+#
+#   ttrss-flag-publish (parameters: <character>; default value: "")
+#   If set and Tiny Tiny RSS support is used, then all articles that are flagged with the specified flag are being marked as "published" in Tiny Tiny RSS.
+#   (example: ttrss-flag-publish "b")
+#
+#   ttrss-flag-star (parameters: <character>; default value: "")
+#   If set and Tiny Tiny RSS support is used, then all articles that are flagged with the specified flag are being "starred" in Tiny Tiny RSS. (example:
+#   ttrss-flag-star "a")
+#
+#   ttrss-login (parameters: <username>; default value: "")
+#   Sets the username for use with Tiny Tiny RSS. (example: ttrss-login "admin")
+#
+#   ttrss-mode (parameters: [multi/single]; default value: multi)
+#   Configures the mode in which Tiny Tiny RSS is used. In single-user mode, login and password are used for HTTP authentication, while in multi-user mode, they
+#   are used for authenticating with Tiny Tiny RSS. (example: ttrss-mode "single")
+#
+#   ttrss-password (parameters: <password>; default value: "")
+#   Configures the password for use with Tiny Tiny RSS. Double quotes should be escaped, i.e. you should write \" instead of ". (example: ttrss-password
+#   "here_goesAquote:\"")
+#
+#   ttrss-passwordfile (parameters: <path>; default value: "")
+#   A more secure alternative to the above, by storing your password elsewhere in your system. (example: ttrss-passwordfile "~/.newsboat/ttrss-pw.txt")
+#
+#   ttrss-passwordeval (parameters: <command>; default value: "")
+#   Another secure alternative, is providing your password from an external command that is evaluated during login. This can be used to read your password from
+#   a gpg encrypted file or your system keyring. (example: ttrss-passwordeval "gpg --decrypt ~/.newsboat/ttrss-password.gpg")
+#
+#            ttrss-url (parameters: <url>; default value: "")
+#                Configures the URL where the Tiny Tiny RSS installation you want to use resides. (example: ttrss-url "https://example.com/ttrss/")
+#
+#            unbind-key (parameters: <key> [<dialog>]; default value: n/a)
+#                Unbind key <key>. This means that no operation is called when <key> is pressed. If you provide "-a" as <key>, all currently bound keys will become unbound.
+#                Optionally, you can specify a dialog (for a list of available dialogs, see bind-key above). If you specify one, the key binding will only be unbound for the
+#                specified dialog. (example: unbind-key R)
+#
+#            urls-source (parameters: <source>; default value: "local")
+#                This configuration command sets the source where URLs shall be retrieved from. By default, this is the urls file. Alternatively, you can set it to opml,
+#                which enables newsboat’s OPML online subscription mode, to ttrss which enables newsboat’s Tiny Tiny RSS support, to oldreader, which enables newsboat’s The
+#                Old Reader support, to newsblur, which enables NewsBlur support, to feedhq for FeedHQ support, to ocnews for ownCloud News support, to inoreader for
+#                Inoreader support, or to miniflux for Miniflux support. Query feed specifications will be read from the local urls file regardless of this setting.
+#                (example: urls-source "oldreader")
+#
+#            urlview-title-format (parameters: <format>; default value: "%N %V - URLs")
+#                Format of the title in URL view. See "Format Strings" section of Newsboat manual for details on available formats. (example: urlview-title-format "URLs")
+#
+#            use-proxy (parameters: [yes/no]; default value: no)
+#                If set to yes, then the configured proxy will be used for downloading the RSS feeds. (example: use-proxy yes)
+#
+#            user-agent (parameters: <string>; default value: "")
+#                If set to a non-zero-length string, this value will be used as HTTP User-Agent header for all HTTP requests. (example: user-agent "Lynx/2.8.5rel.1
+#                libwww-FM/2.14")
+#
+#            wrap-scroll (parameters: [yes/no]; default value: no)
+#                If set to yes, moving down while on the last item in a list will wrap around to the top and vice versa. (example: wrap-scroll yes)
+#
+#     AVAILABLE OPERATIONS
+#            open (default key: ENTER)
+#                Open the currently selected feed or article.
+#
+#            quit (default key: q)
+#                Quit the program or return to the previous dialog (depending on the context).
+#
+#            hard-quit (default key: Q)
+#                Quit the program without confirmation.
+#
+#            reload (default key: r)
+#                Reload the currently selected feed.
+#
+#            reload-all (default key: R)
+#                Reload all feeds.
+#
+#            mark-feed-read (default key: A)
+#                Mark all articles in the currently selected feed read.
+#
+#            mark-all-feeds-read (default key: C)
+#                Mark articles in all feeds read.
+#
+#            mark-all-above-as-read (default key: n/a)
+#                Mark all above as read.
+#
+#            save (default key: s)
+#                Save the currently selected article to a file.
+#
+#            save-all (default key: n/a)
+#                Save all articles from currently selected feed.
+#
+#            next-unread (default key: n)
+#                Jump to the next unread article.
+#
+#            prev-unread (default key: p)
+#                Jump to the previous unread article.
+#
+#            next (default key: J)
+#                Jump to next list entry.
+#
+#            prev (default key: K)
+#                Jump to previous list entry.
+#
+#            random-unread (default key: ^K)
+#                Jump to a random unread article.
+#
+#            open-in-browser (default key: o)
+#                Open the URL associated with the current article, or selection when in the URL view.
+#
+#            open-in-browser-and-mark-read (default key: O)
+#                Open the URL associated with the current article, or selection when in the URL view. When used in the article view, it will also mark the article as read.
+#
+#            open-all-unread-in-browser (default key: n/a)
+#                Open all the unread URLs in the current feed.
+#
+#            open-all-unread-in-browser-and-mark-read (default key: n/a)
+#                Open all the unread URLs in the current feed and mark them as read.
+#
+#            help (default key: ?)
+#                Run the help screen.
+#
+#            toggle-source-view (default key: ^U)
+#                Toggle between the HTML view and the source view in the article view.
+#
+#            toggle-article-read (default key: N)
+#                Toggle the read flag for the currently selected article, and clear the delete flag if set.
+#
+#            toggle-show-read-feeds (default key: l)
+#                Toggle whether read feeds should be shown in the feed list.
+#
+#            show-urls (default key: u)
+#                Show all URLs in the article in a list (similar to urlview).
+#
+#            clear-tag (default key: ^T)
+#                Clear current tag.
+#
+#            set-tag (default key: t)
+#                Select tag.
+#
+#            open-search (default key: /)
+#                Open the search dialog. When a search is done in the article list, then the search operation only applies to the articles of the current feed, otherwise to
+#                all articles.
+#
+#            goto-url (default key: #)
+#                Open the URL dialog and then open a specified URL in the browser.
+#
+#            one (default key: 1)
+#                Open URL 1 in the browser.
+#
+#            two (default key: 2)
+#                Open URL 2 in the browser.
+#
+#            three (default key: 3)
+#                Open URL 3 in the browser.
+#
+#            four (default key: 4)
+#                Open URL 4 in the browser.
+#
+#            five (default key: 5)
+#                Open URL 5 in the browser.
+#
+#            six (default key: 6)
+#                Open URL 6 in the browser.
+#
+#            seven (default key: 7)
+#                Open URL 7 in the browser.
+#
+#            eight (default key: 8)
+#                Open URL 8 in the browser.
+#
+#            nine (default key: 9)
+#                Open URL 9 in the browser.
+#
+#            zero (default key: 0)
+#                Open URL 10 in the browser.
+#
+#            enqueue (default key: e)
+#                Add the podcast download URL of the current article (if any is found) to the podcast download queue (see the respective section in the documentation for
+#                more information on podcast support).
+#
+#            edit-urls (default key: E)
+#                Edit the list of subscribed URLs. newsboat will start the editor configured through the VISUAL environment variable (if unset, EDITOR is used; fallback:
+#                vi). When editing is finished, newsboat will reload the URLs file.
+#
+#            reload-urls (default key: ^R)
+#                Reload the URLs configuration file.
+#
+#            redraw (default key: ^L)
+#                Redraw the screen.
+#
+#            cmdline (default key: :)
+#                Open the command line.
+#
+#            set-filter (default key: F)
+#                Set a filter.
+#
+#            select-filter (default key: f)
+#                Select a predefined filter.
+#
+#            clear-filter (default key: ^F)
+#                Clear currently set filter.
+#
+#            bookmark (default key: ^B)
+#                Bookmark currently selected article or URL.
+#
+#            edit-flags (default key: ^E)
+#                Edit the flags of the currently selected article.
+#
+#            next-unread-feed (default key: ^N)
+#                Go to the next feed with unread articles. This only works from the article list.
+#
+#            prev-unread-feed (default key: ^P)
+#                Go to the previous feed with unread articles. This only works from the article list.
+#
+#            next-feed (default key: j)
+#                Go to the next feed. This only works from the article list.
+#
+#            prev-feed (default key: k)
+#                Go to the previous feed. This only works from the article list.
+#
+#            delete-article (default key: D)
+#                Delete the currently selected article.
+#
+#            delete-all-articles (default key: ^D)
+#                Delete all articles in the current feed.
+#
+#            purge-deleted (default key: $)
+#                Purge all articles that are marked as deleted from the article list.
+#
+#            view-dialogs (default key: v)
+#                View list of open dialogs.
+#
+#            close-dialog (default key: ^X)
+#                Close currently selected dialog.
+#
+#            next-dialog (default key: ^V)
+#                Go to next dialog.
+#
+#            prev-dialog (default key: ^G)
+#                Go to previous dialog.
+#
+#            pipe-to (default key: _| _)
+#                Pipe article to command.
+#
+#            sort (default key: g)
+#                Sort feeds/articles by interactively choosing the sort method.
+#
+#            rev-sort (default key: G)
+#                Sort feeds/articles by interactively choosing the sort method (reversed).
+#
+#            up (default key: UP)
+#                Go up one item in the list.
+#
+#            down (default key: DOWN)
+#                Go down one item in the list.
+#
+#            pageup (default key: PPAGE)
+#                Go up one page in the list.
+#
+#            pagedown (default key: NPAGE)
+#                Go down one page in the list.
+#
+#            home (default key: HOME)
+#                Go to the first item in the list.
+#
+#            end (default key: END)
+#                Go to the last item in the list.
+#
+#            macro-prefix (default key: ,)
+#                Initiate macro execution. The next key press selects the actual macro and runs it.
+#
+#            switch-focus (default key: TAB)
+#                Switch focus between widgets. This is currently only applicable to the filebrowser and dirbrowser contexts.
+#
+#     TAGGING
+#            Newsboat comes with the possibility to categorize or "tag", as we call it, RSS feeds. Every RSS feed can be assigned 0 or more tags. Within newsboat, you can
+#            then select to only show RSS feeds that match a certain tag. That makes it easy to categorize your feeds in a flexible and powerful way.
+#
+#            Usually, the urls file contains one RSS feed URL per line. To assign a tag to an RSS feed, simply attach it as a single word, separated by blanks such as space
+#            or tab. If the tag needs to contain spaces, you must use quotes (") around the tag (see example below). An example urls file may look like this:
+#
+#                https://blog.fefe.de/rss.xml?html interesting conspiracy news "cool stuff"
+#                https://rss.orf.at/news.xml news orf
+#                https://www.heise.de/newsticker/heise.rdf news interesting
+#
+#            When you now start newsboat with this configuration, you can press "t" to select a tag. When you select the tag "news", you will see all three RSS feeds.
+#            Pressing "t" again and e.g. selecting the "conspiracy" tag, you will only see the https://blog.fefe.de/rss.xml?html RSS feed. Pressing "^T" clears the current
+#            tag, and again shows all RSS feeds, regardless of their assigned tags.
+#
+#            A special type of tag are tags that start with the tilde character (~). When such a tag is found, the feed title is set to the tag name (excluding the ~
+#            character). These type of tags are ignored when any kind of "first tag" property is used. With this feature, you can give feeds any title you want in your feed
+#            list:
+#
+#                https://rss.orf.at/news.xml "~ORF News"
+#
+#            Another special type of tag are tags that start with the exclamation mark (!). When such a tag is found, the feed is hidden from the regular list of feeds and
+#            its content can only be found through a query feed.
+#
+#                https://rss.orf.at/news.xml "!ORF News (hidden)"
+#
+#     SCRIPTS AND FILTERS
+#            Newsboat contains support for Snownews extensions. The RSS feed readers Snownews and Liferea share a common way of extending the readers with custom scripts.
+#            Two mechanisms, namely "execurl" and "filter" type scripts, are available and supported by newsboat.
+#
+#            An "execurl" script can be any program that gets executed and whose output is interpreted as RSS feed, while "filter" scripts are fed with the content of a
+#            configured URL and whose output is interpreted as RSS feed.
+#
+#            The configuration is simple and straight-forward. Just add to your urls file configuration lines like the following ones:
+#
+#                exec:~/bin/execurl-script
+#                filter:~/bin/filter-script:https://some.test/url
+#
+#            The first line shows how to add an execurl script to your configuration: start the line with exec: and then immediately append the path of the script that shall
+#            be executed. If this script requires additional parameters, simply use quotes (see [_using_double_quotes] for details):
+#
+#                "exec:~/bin/execurl-script param1 param2"
+#
+#            The second line shows how to add a filter script to your configuration: start the line with filter:, then immediately append the path of the script, then append
+#            a colon (:), and then append the URL of the file that shall be fed to the script. Again, if the script requires any parameters, simply quote the whole thing:
+#
+#                "filter:~/bin/filter-script param1 param2:https://url/foobar"
+#
+#            In both cases, the tagging feature as described above is still available:
+#
+#                exec:~/bin/execurl-script tag1 tag2 "quoted tag"
+#                filter:~/bin/filter-script:https://some.test/url tag3 tag4 tag5
+#
+#            If you need to write your own extension, see this <https://web.archive.org/web/20090724045314/http://kiza.kcore.de/software/snownews/snowscripts/writing> short
+#            guide"  for an introduction. A collection <https://github.com/kouya/snownews/tree/master/contrib> of existing scripts"  might also help.
+#
+#            Newsboat comes with an example exec script which shows one way to generate an RSS channel. It also includes a way to see which exact arguments are passed to the
+#            script by Newsboat. This example can be found in the doc/examples subdirectory.
+#
+#     COMMAND LINE
+#            Like other text-oriented software, Newsboat contains an internal commandline to modify configuration variables ad hoc and to run own commands. It provides a
+#            flexible access to the functionality of Newsboat which is especially useful for advanced users.
+#
+#            To start the commandline, type ":". You will see a ":" prompt at the bottom of the screen, similar to tools like vi(m) or mutt. You can now enter commands.
+#            Pressing the "Enter" key executes the command (possibly giving feedback to the user) and closes the commandline. You can cancel entering commands by pressing
+#            the "Esc" key. The history of all the commands that you enter will be saved to the history.cmdline file, stored next to the cache.db file. The backlog is
+#            limited to 100 entries by default, but can be influenced by setting the history-limit configuration variable. To disable history saving, set the history-limit
+#            to 0.
+#
+#            The commandline provides you with some help if you can’t remember the full names of commandline commands. By pressing the "Tab" key, newsboat will try to
+#            automatically complete your command. If there is more than one possible completion, you can subsequently press the "Tab" key to cycle through all results. If no
+#            match is found, no suggestion will be inserted into the commandline. For the set command, the completion also works for configuration variable names.
+#
+#            In addition, some common key combination such as "Ctrl-G" (to cancel input), "Ctrl-K" (to delete text from the cursor position to the end of line), "Ctrl-U" (to
+#            clear the whole line) and "Ctrl-W" (to delete the word before the current cursor position) were added.
+#
+#            Please be aware that the input history of both the command line and the search functions are saved to the filesystems, to the files history.cmdline resp.
+#            history.search (stored next to the cache.db file). By default, the last 100 entries are saved, but this can be configured (configuration variable history-limit)
+#            and also totally disabled (by setting said variable to 0).
+#
+#            Currently, the following command line commands are available:
+#
+#            quit
+#                Quit newsboat
+#
+#            q
+#                Alias for quit
+#
+#            save <filename>
+#                Save current article to <filename>
+#
+#             set <variable>[=<value>|&|!]
+#                Set (or get) configuration variable value. Specifying a ! after the name of a boolean configuration variable toggles their values, a & directly after the
+#                name of a configuration variable of any type resets its value to the documented default value.
+#
+#            tag <tagname>
+#                Select a certain tag
+#
+#            goto <case-insensitive substring>
+#                Go to the next feed whose name contains the case-insensitive substring.
+#
+#            source <filename> [...]
+#                Load the specified configuration files. This allows it to load alternative configuration files or reload already loaded configuration files on-the-fly from
+#                the filesystem.
+#
+#            dumpconfig <filename>
+#                Save current internal state of configuration to file, so that it can be instantly reused as configuration file.
+#
+#            <number>
+#                Jump to the <number>th entry in the current dialog
+#
+#     FILES
+#            By default, Newsboat stores all the files in a traditional Unix fashion, i.e. in the "dotdir" located at ~/.newsboat. However, it also supports a modern way,
+#            XDG Base Directory Specification <https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>, which splits the files between the following
+#            locations:
+#
+#            •   ~/.local/share/newsboat/
+#
+#            •   ~/.config/newsboat/
+#
+#            If these directories exist or the environment variables $XDG_CONFIG_HOME and $XDG_DATA_HOME are set, newsboat will use these directories, otherwise it will
+#            default to ~/.newsboat as its configuration directory.
+#
+#            If you’re currently using ~/.newsboat/ but wish to migrate to XDG directories, you should move the files as follows:
+#
+#            config, urls
+#                to $HOME/.config/newsboat/
+#
+#            cache.db, history.search, history.cmdline, queue
+#                to $HOME/.local/share/newsboat/
+#
+#            dotfiles
+#                $HOME/.newsboat/config
+#
+#                $HOME/.newsboat/urls
+#
+#            XDG
+#                $HOME/.config/newsboat/config
+#
+#                $HOME/.config/newsboat/urls
+#
+#     ENVIRONMENT
+#            BROWSER
+#                Tells Newsboat what browser to use if there is no browser setting in the config file. If this variable doesn’t exist, a default of lynx(1) will be used.
+#
+#            CURL_CA_BUNDLE
+#                Tells Newsboat to use the specified certificate file to verify the peer. The file may contain multiple certificates. The certificate(s) must be in PEM
+#                format.
+#
+#                This option is useful if your libcurl is built without useful certificate information, and you can’t rebuild the library yourself.
+#
+#            EDITOR
+#                Tells Newsboat what fallback editor to use when editing the urls file via the edit-urls operation and no VISUAL environment variable is set. If this
+#                variable doesn’t exist either, a default of vi(1) will be used.
+#
+#            PAGER
+#                Tells Newsboat what pager to use if the pager setting in the config file is explicitly set to an empty string.
+#
+#            TMPDIR
+#                Tells Newsboat to use the specified directory for storing temporary files. If this variable doesn’t exist, a default of /tmp will be used.
+#
+#            VISUAL
+#                Tells Newsboat what editor to use when editing the urls file via the edit-urls operation. If this variable doesn’t exist, the EDITOR environment variable
+#                will be used.
+#
+#            XDG_CONFIG_HOME
+#                Tells Newsboat which base directory to use for the configuration files. See also the section on files for more information.
+#
+#            XDG_DATA_HOME
+#                Tells Newsboat which base directory to use for the data files. See also the section on files for more information.
+
+#     always-download (parameters: <url> [<url>...]; default value: n/a)
+#     Specifies one or more feed URLs that should always be downloaded, regardless of their Last-Modified timestamp and ETag header. This option can be specified
+#     multiple times. (example: always-download "https://www.n-tv.de/23.rss")
+#
+#     articlelist-format (parameters: <format>; default value: "%4i %f %D %6L  %?T?|%-17T|  ?%t")
+#     This variable defines the format of entries in the article list. See the respective section in the documentation for more information on format strings.
+#     (example: articlelist-format "%4i %f %D   %?T?|%-17T|  ?%t")
+#
+#            articlelist-title-format (parameters: <format>; default value: "%N %V - Articles in feed '%T' (%u unread, %t total)%?F? matching filter `%F'&? - %U")
+#                Format of the title in article list. See "Format Strings" section of Newsboat manual for details on available formats. (example: articlelist-title-format
+#                "Articles in feed '%T' (%u unread)")
+#
+#   bind-key (parameters: <key> <operation> [<dialog>]; default value: n/a)
+#   Bind key <key> to <operation>. This means that whenever <key> is pressed, then <operation> is executed (if applicable in the current dialog). A list of
+#   available operations can be found below. Optionally, you can specify a dialog. If you specify one, the key binding will only be added to the specified
+#   dialog. Available dialogs are all (default if none is specified), feedlist, filebrowser, help, articlelist, article, tagselection, filterselection, urlview,
+#   podboat, and dirbrowser. (example: bind-key ^R reload-all)
+#
+#   bookmark-cmd (parameters: <command>; default value: "")
+#   If set, then <command> will be used as bookmarking plugin. See the documentation on bookmarking for further information. (example: bookmark-cmd
+#       "~/bin/delicious-bookmark.sh")
+#
+#            browser (parameters: <command>; default value: %BROWSER, otherwise lynx)
+#                Set the browser command to use when opening an article in the browser. If the BROWSER environment variable is set, it will be used as the default browser,
+#                otherwise lynx will be used. Any occurrences of %u in <command> will be replaced by a URL in single quotes. (example: browser "w3m %u")
+#
+#            dialogs-title-format (parameters: <format>; default value: "%N %V - Dialogs")
+#                Format of the title in dialog list. See "Format Strings" section of Newsboat manual for details on available formats. (example: dialogs-title-format "%N %V
+#                - Dialogs")
+#
+#            dirbrowser-title-format (parameters: <format>; default value: "%N %V - %?O?Open Directory&Save File? - %f")
+#                Format of the title in directory browser. See "Format Strings" section of Newsboat manual for details on available formats. (example: dirbrowser-file-format
+#                "%?O?Open Directory&Save File? - %f")
+#
+#            display-article-progress (parameters: [yes/no]; default value: yes)
+#                If set to yes, then a read progress (in percent) is displayed in the article view. Otherwise, no read progress is displayed. (example:
+#                display-article-progress no)
+#
+#            download-full-page (parameters: [yes/no]; default value: no)
+#                If set to yes, then for all feed items with no content but with a link, the link is downloaded and the result used as content instead. This may
+#                significantly increase the download times of "empty" feeds. (example: download-full-page yes)
+#
+##            external-url-viewer (parameters: <command>; default value: "")
+#                If set, then show-urls will pipe the current article to a specific external tool instead of using the internal URL viewer. This can be used to integrate
+#                tools such as urlview. (example: external-url-viewer "urlview")
+#
+#            feed-sort-order (parameters: <sortfield>[-<direction>]; default value: none)
+#                The <sortfield> specifies which feed property shall be used for sorting; currently available are: firsttag, title, articlecount, unreadarticlecount,
+#                lastupdated and none. The optional <direction> specifies the sort direction. asc specifies ascending sorting, desc specifies descending sorting. desc is the
+#                default. (example: feed-sort-order firsttag)
+#
+#   include (parameters: <path>; default value: n/a)
+#   With this command, you can include other files to be interpreted as configuration files. This is especially useful to separate your configuration into
+#   several files, e.g. key configuration, color configuration, ... (example: include "~/.newsboat/colors")
+#
+

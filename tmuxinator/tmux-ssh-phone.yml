@@ -1,0 +1,23 @@
+
+##  ===============================================================================================
+#   TITLE : tmux-ssh-phone.sh
+#   ABOUT : auto tmux for normal + ssh session for phone
+#   LINKS : -
+#   FILES : ~/.ssh/config ~/.scripts/tmux-whiptail.sh
+##  ===============================================================================================
+name: tmux-ssh-phone
+root: ~/
+
+windows:
+
+  - gemini:
+      layout: main-vertical
+      panes:
+        - gemini
+
+  - home:
+      layout: main-vertical
+      panes:
+        - #$HOME directory
+        - ssh PHONE
+

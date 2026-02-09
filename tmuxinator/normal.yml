@@ -1,0 +1,18 @@
+
+# ~/.config/tmuxinator/normal.yml
+
+name: normal
+root: ~/
+
+windows:
+
+  - home:
+      layout: main-vertical
+      panes:
+        - #$HOME directory
+
+  - GEMINI:
+      layout: main-vertical
+      panes:
+        - gemini
+

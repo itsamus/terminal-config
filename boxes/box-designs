@@ -1,0 +1,139 @@
+BOX double
+
+author   "V i N"
+revision "0.0.1"
+revdate  ""
+created  ""
+tags     "verkankering"
+
+sample
+    ╔══════════════════════╗
+    ║                      ║
+    ║                      ║
+    ║                      ║
+    ║                      ║
+    ║                      ║
+    ║                      ║
+    ║                      ║
+    ╚══════════════════════╝
+    ends
+
+shapes {
+    nw  ("╔")
+    n   ("═")
+    ne  ("╗")
+    w   ("║")
+    e   ("║")
+    sw  ("╚")
+    s   ("═")
+    se  ("╝")
+}
+
+replace "═" with "\\═"
+reverse "\\═" to "═"
+
+elastic (n, e, w, s)
+
+padding { horiz 1 }
+
+END double
+
+
+
+
+BOX html
+
+author   "Thomas Jensen"
+designer "(public domain)"
+revision "1.2"
+revdate  "October 19, 2012 (Friday, 17:32h)"
+created  "March 18, 1999 (Thursday, 15:26h)"
+tags     "simple, programming, box"
+
+sample
+
+    <!-- - - - - - - - - - - -->
+    <!-- - - - - - - - - - - -->
+    <!--                     -->
+    <!--                     -->
+    <!--                     -->
+    <!-- - - - - - - - - - - -->
+    <!-- - - - - - - - - - - -->
+
+    ends
+
+shapes {
+    nw ("<!--",
+        "<!--")
+    nnw (" ",
+         " ")
+    n ("- ",
+       "- ")
+    ne ("-->",
+        "-->")
+     w ("<!--")
+     e ("-->")
+    sw ("<!--",
+        "<!--")
+    ssw (" ",
+         " ")
+    s ("- ",
+       "- ")
+    se ("-->",
+        "-->")
+}
+
+padding { h 1 }
+
+delim ?"
+replace "-->" with "-\\-\\>"
+reverse "-\\-\\>" to "-->"
+
+elastic (n,e,s,w)
+
+END html
+
+BOX boxx
+
+author    "Vin DáMan"
+designer  "(public domain)"
+revision  "1.0"
+revdate   "April 14, 1996"
+created   "April 15, 1996"
+tags      "simple"
+
+sample
+    ┌──────────────────────┐
+    │                      │
+    │                      │
+    │                      │
+    │                      │
+    │                      │
+    │                      │
+    │                      │
+    └──────────────────────┘
+    ends
+
+shapes {
+    nw ("┌")
+   nnw ("─")
+     n ("─")
+   nne ("─")
+    ne ("┐")
+   ene ("│")
+     e ("│")
+   ese ("│")
+    se ("┘")
+   sse ("─")
+     s ("─")
+   ssw ("─")
+    sw ("└")
+   wsw ("│")
+     w ("│")
+   wnw ("│")
+}
+
+padding { h 1 }
+elastic (n,e,s,w)
+
+END boxx

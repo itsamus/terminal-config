@@ -1,0 +1,52 @@
+[display]
+use_pager = false
+compact = true
+show_title = false
+
+[style.description]
+bold = false 
+italic = false
+underline = false
+foreground = { ansi = 16 }
+background = { ansi = 16 }
+
+[style.command_name]
+bold = true 
+italic = false
+underline = true
+foreground = { ansi = 161 }
+background = { ansi = 16 }
+
+[style.example_text]
+bold = false 
+italic = true
+underline = false
+foreground = { ansi = 240 }
+background = { ansi = 16 }
+
+[style.example_code]
+bold = false 
+italic = false
+underline = false
+foreground = { ansi = 131 }
+background = { ansi = 16 }
+
+[style.example_variable]
+bold = false 
+italic = false
+underline = false
+foreground = { ansi = 131 }
+background = { ansi = 16 }
+
+[search]
+languages = ["nl", "en"]
+platforms = ["linux", "common", "all"]
+
+[updates]
+auto_update = true
+auto_update_interval_hours = 24
+download_languages = ["nl", "en"]
+
+[directories]
+custom_pages_dir = "/home/itsamus/.local/share/tealdeer/pages/"
+cache_dir = "/home/itsamus/.cache/tealdeer/"

@@ -1,0 +1,3 @@
+batclip () {
+           bat "$@" | xclip
+           }
