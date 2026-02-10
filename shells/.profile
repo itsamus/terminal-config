@@ -51,7 +51,9 @@ export NVM_DIR="$HOME/.config/nvm"
 if [ -f $HOME/.config/shells/bash/.bashrc ]; then
     . $HOME/.config/shells/bash/.bashrc
 fi
-
+##  if [ -f $HOME/.config/shells/zsh/.zshrc ]; then
+##      . $HOME/.config/shells/zsh/.zshrc
+##  fi
 export CROSTINI_SKIP_ADMIN_CHECK=1
 # . "$HOME/.cargo/env"
 
