@@ -154,5 +154,8 @@ export EZA_COLORS="di=3;38;5;21:ex=38;5;46:fi=38;5;250:ln=3;38;5;165:or=1;38;5;1
     function spin() {
         /home/itsamus/.scripts/spinner.sh "$@"
     }
+
 ###  test!
+    eval $(thefuck --alias)
+    eval "$(zoxide init bash)"
 

@@ -54,7 +54,7 @@
     o.pumheight = 10          --  maximum number of items to show in the popup menu
     o.pumblend = 10
     o.winblend = 0
-    o.conceallevel = 0        --  whether concealable text is shown or hidden
+    o.conceallevel = 2        --  whether concealable text is shown or hidden
     o.lazyredraw = false      --  don't redraw while executing macros
     o.redrawtime = 10000      --  timeout for 'hlsearch' and |:match| highlighting
     o.maxmempattern = 20000   --  maximum memory (in Kbyte) used for pattern search

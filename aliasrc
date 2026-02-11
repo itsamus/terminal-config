@@ -43,6 +43,7 @@
         weer="curl wttr.in/Edam" \
         nali="nvim $XDG_CONFIG_HOME/aliasrc" \
         gemini="cd ~ ; nvm use 20 ; gemini && cd -" \
+        syscheat="nvim $HOME/.help/cheatsheet-system-cmds.sh" \
         systemcheat="nvim $HOME/.help/cheatsheet-system-cmds.sh" \
         systemcheats="nvim $HOME/.help/cheatsheet-system-cmds.sh" \
         env="env | grep -v -E 'EZA_COLORS|LS_COLORS|PATH|XDG' | sort" \

@@ -34,7 +34,6 @@
         CursorLine =   { fg = "NONE", bg = "#330000" },
         CursorLineNr = { fg = "#FF0033", bg = "#330000" },
         StatusLine =   { fg = "#FF0033", bg = "#1C1C1C" },
-
     }
 
     for group, opts in pairs(highlights) do

@@ -1,3 +1,4 @@
+
 BOX double
 
 author   "V i N"
@@ -37,9 +38,6 @@ elastic (n, e, w, s)
 padding { horiz 1 }
 
 END double
-
-
-
 
 BOX html
 
@@ -137,3 +135,4 @@ padding { h 1 }
 elastic (n,e,s,w)
 
 END boxx
+

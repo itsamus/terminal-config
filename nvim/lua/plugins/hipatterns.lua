@@ -8,7 +8,7 @@
 --  ===============================================================================================
 --  TITLE : hipatterns.lua
 --  ABOUT : colorize text patterns in nvim (comments)
---  LINKS :
+--  LINKS : https://github.com/nvim-mini/mini.hipatterns
 --  ===============================================================================================
 
     return {
