@@ -123,7 +123,9 @@ export EZA_COLORS="di=3;38;5;21:ex=38;5;46:fi=38;5;250:ln=3;38;5;165:or=1;38;5;1
     HISTFILESIZE=$XDG_CACHE_HOME/bash_history
     HISTIGNORE="ls:lsa:lsaa:pwd:n:cd:c:clear:history"
     HISTCONTROL=ignoredups:erasedups
-    HISTTIMEFORMAT="_%g|_%e%b__%A__%H:%M >> "
+##    HISTTIMEFORMAT="_%g|_%e%b__%A__%H:%M >> "
+     HISTTIMEFORMAT="_B %-d, %Y"
+
 ##  ---------------------------------------------------------------------------------------------\\\
 ##  ---[ BUILT-IN COMMANDS ]---------------------------------------------------------------------///
     shopt -s histappend
