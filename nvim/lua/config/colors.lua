@@ -10,6 +10,44 @@
 --  LINKS : -
 --  ===============================================================================================
 
+--  local function fix_italics()
+--      -- 1. Kleuren instellen
+--      vim.api.nvim_set_hl(0, "Header1", { ctermfg = 240, fg = "#BCBCBC" })
+--      vim.api.nvim_set_hl(0, "Header2", { ctermfg = 250, fg = "#949494", italic = true })
+--      vim.api.nvim_set_hl(0, "Header3", { ctermfg = 250, fg = "#BCBCBC" })
+--      vim.api.nvim_set_hl(0, "Header4", { ctermfg = 240, fg = "#949494", italic = true })
+--      vim.api.nvim_set_hl(0, "Header5", { ctermfg = 240, fg = "#949494" }) -- --  =
+--      vim.api.nvim_set_hl(0, "Header6", { ctermfg = 240, fg = "#949494" }) -- ##  =
+--      vim.api.nvim_set_hl(0, "Header7", { ctermfg = 240, fg = "#949494" }) -- ##  -
+--      vim.api.nvim_set_hl(0, "Header8", { ctermfg = 240, fg = "#949494" }) -- --  -
+--
+--      -- 2. Bestaande matches opschonen (optioneel, voorkomt dubbele lagen bij herladen)
+--      vim.fn.clearmatches()
+--
+--      -- 3. Matches toevoegen (Hogere prioriteit voor specifieke patronen)
+--      -- Specifieke patronen met '=' of '-' (Prioriteit 1002)
+--      vim.fn.matchadd("Header6", [[^##  =.*]], 1002)
+--      vim.fn.matchadd("Header5", [[^--  =.*]], 1002)
+--      vim.fn.matchadd("Header7", [[^##  -.*]], 1002)
+--      vim.fn.matchadd("Header8", [[^--  -.*]], 1002)
+--
+--      -- Header 1 & 4 (Algemene patronen, lagere prioriteit)
+--      -- We gebruiken negative lookahead \(\) \@! om te voorkomen dat ze de specifieke koppen 'stelen'
+--      vim.fn.matchadd("Header1", [[##\(  [=-]\)\@!.*]], 1000)
+--      vim.fn.matchadd("Header2", [[^#\([#0-9a-fA-F]\)\@!.*]], 1001)
+--      vim.fn.matchadd("Header3", [[--   .*]], 1000)
+--      vim.fn.matchadd("Header4", [[--\(   \|  [=-]\)\@!.*]], 999)
+--  end
+--
+---- Gebruik de meest agressieve trigger: 'WinEnter' en 'BufWinEnter'
+--vim.api.nvim_create_autocmd({ "WinEnter", "BufWinEnter", "VimEnter" }, {
+--  pattern = "*",
+--  callback = function()
+--    -- Kleine vertraging is essentieel als je plugins zoals Treesitter gebruikt
+--    vim.schedule(fix_italics)
+--  end,
+--})
+--
     local colors = {
         bg = "#000000",
         fg = "#585858",

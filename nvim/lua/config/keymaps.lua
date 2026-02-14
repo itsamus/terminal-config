@@ -15,7 +15,7 @@
 
 --
 --  ---[ Normal Mode      ]----------------------------------------------------------------------///
-
+vim.keymap.set('n', 'gf', '<C-w>gf', { noremap = true, silent = true, desc = "Open file under cursor in new tab" })
 --  --------------------------[ Folds            ]-----------------------------------------------///
     vim.keymap.set("n", "zO", "zR",  {noremap = true, silent = true, desc = "Open all folds" })
     vim.keymap.set("n", "zC", "zM",  {noremap = true, silent = true, desc = "Close all folds" })

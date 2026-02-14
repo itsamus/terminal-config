@@ -1,6 +1,10 @@
 
 # ~/.config/eza/theme.yml
 
+filekinds:
+  directory:
+    icon: { glyph: "📁" }
+
 extensions:
   txt:
     icon: { glyph: "Τ" }
