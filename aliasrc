@@ -63,10 +63,12 @@
         cal="/home/itsamus/.scripts/cal.py" \
         abook="/home/itsamus/.scripts/abook" \
         zara="/home/itsamus/.scripts/zara.sh" \
+        define="/home/itsamus/.scripts/define.sh" \
+        textbox="/home/itsamus/.scripts/textbox.sh" \
+        hetweer="/home/itsamus/.scripts/hetweer.sh" \
+        nano216="/home/itsamus/.scripts/nano216.sh" \
         tmux="/home/itsamus/.scripts/tmux-whiptail.sh" \
         fish="perl /home/itsamus/.scripts/asciiquarium" \
-        textbox="/home/itsamus/.scripts/textbox.sh" \
-        nano216="/home/itsamus/.scripts/nano216.sh" \
         figletbox="/home/itsamus/.scripts/figletbox.sh" \
         fileheader="/home/itsamus/.scripts/fileheader.sh"
 ##  ---------------------------------------------------------------------------------------------\\\

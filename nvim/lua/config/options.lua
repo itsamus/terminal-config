@@ -11,6 +11,14 @@
 --  ===============================================================================================
     local o = vim.opt
 
+    -- Optionele handmatige configuratie
+    vim.lsp.config('bashls', {
+        -- Voeg hier extra instellingen toe indien nodig
+        -- cmd = { 'bash-language-server', 'start' },
+        filetypes = { 'sh', 'bash' },
+    })
+    -- En daarna inschakelen
+    vim.lsp.enable('bashls')
 --  ---[ Basic settings   ]----------------------------------------------------------------------///
     o.number = true		    --  print the line number in front of each line
     --  o.relativenumber = true 	      --  show relative line number in front of each line
