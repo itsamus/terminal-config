@@ -7,9 +7,9 @@ filekinds:
 
 extensions:
   txt:
-    icon: { glyph: "Τ" }
+    icon: { glyph: "" }
   md:
-    icon: { glyph: "❓" }
+    icon: { glyph: "" }
   yml:
     icon: { glyph: "📜" }
   yaml:

@@ -71,4 +71,11 @@
     export CROSTINI_SKIP_ADMIN_CHECK=1
     # . "$HOME/.cargo/env"
 
+#    FD_OPTIONS="--follow --hidden"
+
+#    export FZF_DEFAULT_OPS="--no-mouse --height 50% -1 --reverse --multi --inline-info --preview-'[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2>/dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers {} || less -f {}),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | pbcopy)'"
+
+#    export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f --type l $FD_OPTIONS"
+export EZA_COLORS="di=3;38;5;21:ex=38;5;46:fi=38;5;250:ln=3;38;5;165:or=1;38;5;16;48;5;197:ur=38;5;240:uw=38;5;250:ux=38;5;196:ue=38;5;196:gr=38;5;240:gw=38;5;250:gx=38;5;196:tr=38;5;240:tw=38;5;250:tx=38;5;196:lp=38;5;201"
+
 

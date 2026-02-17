@@ -1,3 +1,4 @@
+
 ##   _              _     _           _ _
 ##  | | _____ _   _| |__ (_)_ __   __| (_)_ __   __ _ ___ 	   ___             _
 ##  | |/ / _ \ | | | '_ \| | '_ \ / _` | | '_ \ / _` / __|	  / / |__  __ _ __| |_
@@ -11,4 +12,5 @@
 #   bind '"\C-h":reverse-search-history'
     bind -x '"\C-t0": calcurse'
 	bind -r '"\C-m"'
-	bind -x '"\C-x\C-m": "neomutt"'
+# 	bind -x '"\C-x\C-m": "neomutt"'
+

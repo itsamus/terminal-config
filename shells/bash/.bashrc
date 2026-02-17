@@ -74,6 +74,7 @@
     export NPM_DIR="$HOME/.config/npm"
     export NVM_DIR="$HOME/.config/nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    export EZA_COLORS="di=3;38;5;21:ex=38;5;46:fi=38;5;250:ln=3;38;5;165:or=1;38;5;16;48;5;197:ur=38;5;240:uw=38;5;250:ux=38;5;196:ue=38;5;196:gr=38;5;240:gw=38;5;250:gx=38;5;196:tr=38;5;240:tw=38;5;250:tx=38;5;196:lp=38;5;201"
 
 ##    export EZA_COLORS="di=3;38;5;21:ex=38;5;46:fi=38;5;250:ln=3;38;5;165:or=1;38;5;16;48;5;197:ur=38;5;240:uw=38;5;250:ux=38;5;196:ue=38;5;196:gr=38;5;240:gw=38;5;250:gx=38;5;196:tr=38;5;240:tw=38;5;250:tx=38;5;196:lp=38;5;201:bO=1;38;5;16;48;5;197"
 
@@ -123,8 +124,7 @@
     HISTFILESIZE=$XDG_CACHE_HOME/bash_history
     HISTIGNORE="ls:lsa:lsaa:pwd:n:cd:c:clear:history"
     HISTCONTROL=ignoredups:erasedups
-##    HISTTIMEFORMAT="_%g|_%e%b__%A__%H:%M >> "
-     HISTTIMEFORMAT="_B %-d, %Y"
+    HISTTIMEFORMAT="_%g|_%e%b__%A__%H:%M >> "
 
 ##  ---------------------------------------------------------------------------------------------\\\
 ##  ---[ BUILT-IN COMMANDS ]---------------------------------------------------------------------///
@@ -137,6 +137,8 @@
     shopt -s histverify
     shopt -s nocaseglob
     shopt -s lithist
+
+    # set -o vi
 ##  ---------------------------------------------------------------------------------------------\\\
 ##  ---[ PERSONAL KEYBINDINGS ]------------------------------------------------------------------///
     [ -f "$XDG_CONFIG_HOME/shells/.unbindings" ]&& . "$XDG_CONFIG_HOME/shells/.unbindings"
@@ -147,17 +149,11 @@
         [ -x "$file" ]&& source "$file"
     done
 ##  ---------------------------------------------------------------------------------------------\\\
-#aa
 ##  ///
 
     cal.py
 
 ##                                                                                                \\\
-    function spin() {
-        /home/itsamus/.scripts/spinner.sh "$@"
-    }
-
-###  test!
     eval $(thefuck --alias)
     eval "$(zoxide init bash)"
 

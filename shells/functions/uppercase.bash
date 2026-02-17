@@ -1,9 +1,9 @@
 
 #   example ussage:
 
-#           shell
+#       shell
 #       $ uppercase "hello, world!"
-#           HELLO, WORLD!
+#       HELLO, WORLD!
 
     uppercase () {
         printf '%s\n' "${1^^}"

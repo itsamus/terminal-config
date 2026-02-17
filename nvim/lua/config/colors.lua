@@ -61,15 +61,15 @@
     }
 
     local highlights = {
-        Normal =     { fg = colors.gray, bg = colors.bg },
+        Normal =     { fg = colors.gray, bg = "#000033" },
         Visual =     { fg = colors.bg, bg = "#FF0033" },
         Search =     { fg = colors.bg, bg = "#FFFF00" },
         LineNr =       { fg = "#FF0033", bg = colors.bg },
         Folded =       { fg = "#FF6600", bg = "NONE" },
         FoldColumn =   { fg = "#FF6600", bg = "NONE" },
         String =       { fg = "#00FF00", bg = "NONE" },
-        CursorColumn = { fg = "NONE", bg = "#330000" },
-        CursorLine =   { fg = "NONE", bg = "#330000" },
+        CursorColumn = { fg = "NONE", bg = "#333333" },
+        CursorLine =   { fg = "NONE", bg = "#333333" },
         CursorLineNr = { fg = "#FF0033", bg = "#330000" },
         StatusLine =   { fg = "#FF0033", bg = "#1C1C1C" },
     }

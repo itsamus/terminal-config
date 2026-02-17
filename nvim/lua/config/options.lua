@@ -19,13 +19,15 @@
     })
     -- En daarna inschakelen
     vim.lsp.enable('bashls')
+
 --  ---[ Basic settings   ]----------------------------------------------------------------------///
     o.number = true		    --  print the line number in front of each line
     --  o.relativenumber = true 	      --  show relative line number in front of each line
     --  o.numberwidth = 6               --  number of columns used for the line number
     o.cursorcolumn = true           --  highlight the screen column of the cursor
     o.cursorline = true 		    --  highlight the screen line of the cursor
-    o.spelllang = { "en", "nl" }    --  language(s) to do spell checking for
+    --  o.spelllang = { "en", "nl" }    --  language(s) to do spell checking for
+    --  o.spell = true
     o.wrap = true		    --  lines wrap and continue on the next line
     o.linebreak = true  --  wrap long lines at a blank
     o.showbreak = "└ "        --  string to use at the start of wrapped lines
