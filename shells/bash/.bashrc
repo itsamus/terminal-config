@@ -150,10 +150,9 @@
     done
 ##  ---------------------------------------------------------------------------------------------\\\
 ##  ///
-
     cal.py
-
-##                                                                                                \\\
     eval $(thefuck --alias)
     eval "$(zoxide init bash)"
+##                                                                                                \\\
+export LYNX_CFG_PATH="$HOME/.config/lynx/"
 

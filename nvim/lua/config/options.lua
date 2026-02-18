@@ -22,7 +22,7 @@
 
 --  ---[ Basic settings   ]----------------------------------------------------------------------///
     o.number = true		    --  print the line number in front of each line
-    --  o.relativenumber = true 	      --  show relative line number in front of each line
+    o.relativenumber = true 	      --  show relative line number in front of each line
     --  o.numberwidth = 6               --  number of columns used for the line number
     o.cursorcolumn = true           --  highlight the screen column of the cursor
     o.cursorline = true 		    --  highlight the screen line of the cursor

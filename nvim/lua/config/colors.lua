@@ -61,7 +61,7 @@
     }
 
     local highlights = {
-        Normal =     { fg = colors.gray, bg = "#000033" },
+        Normal =     { fg = colors.gray, bg = "#000000" },
         Visual =     { fg = colors.bg, bg = "#FF0033" },
         Search =     { fg = colors.bg, bg = "#FFFF00" },
         LineNr =       { fg = "#FF0033", bg = colors.bg },

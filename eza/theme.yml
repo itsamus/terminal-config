@@ -1,15 +1,16 @@
 
 # ~/.config/eza/theme.yml
-
 filekinds:
   directory:
-    icon: { glyph: "📁" }
+    icon: { glyph: "🎯" }
 
 extensions:
+  bak:
+    icon: { glyph: "💾"}
   txt:
-    icon: { glyph: "" }
+    icon: { glyph: "✏" }
   md:
-    icon: { glyph: "" }
+    icon: { glyph: "🎯" }
   yml:
     icon: { glyph: "📜" }
   yaml:
