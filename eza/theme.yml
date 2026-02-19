@@ -5,6 +5,8 @@ filekinds:
     icon: { glyph: "🎯" }
 
 extensions:
+  conf:
+    icon: { glyph: "⚙" }
   bak:
     icon: { glyph: "💾"}
   txt:

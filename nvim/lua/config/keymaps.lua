@@ -16,6 +16,9 @@
 --
 --  ---[ Normal Mode      ]----------------------------------------------------------------------///
 vim.keymap.set('n', 'gf', '<C-w>gf', { noremap = true, silent = true, desc = "Open file under cursor in new tab" })
+vim.keymap.set("n", "<C-Up>", "<Cmd>resize +2<CR>", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-Down>", "<Cmd>resize -2<CR>", { desc = "Decrease window height" })
+
 --  --------------------------[ Folds            ]-----------------------------------------------///
     vim.keymap.set("n", "zO", "zR",  {noremap = true, silent = true, desc = "Open all folds" })
     vim.keymap.set("n", "zC", "zM",  {noremap = true, silent = true, desc = "Close all folds" })

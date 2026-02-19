@@ -9,6 +9,8 @@
 --  TITLE : Filler-begone.lua
 --  ABOUT : Plugin to prevent scrolling past the bottem to show unnecessary lines.
 --  LINKS : https://github.com/saghen/filler-begone.nvim
+--  FILES : -
+--  TAGS  : #nvim #system #editor
 --  ===============================================================================================
 
     return {
