@@ -30,7 +30,7 @@
     export XDG_RUNTIME_DIR="/run/user/1000"
     export XDG_SCRIPTS="$HOME/.scripts"
     export XDG_LANGUAGES="$HOME/.languages"
-    export XDG_SCRIPTS="$HOME/.scripts"
+    # export XDG_SCRIPTS="$HOME/.scripts"
 ##  ---------------------------------------------------------------------------------------------\\\
 ##  ---[ REGULAR ENVIORMENT ]--------------------------------------------------------------------///
     # export LESS="R"
@@ -51,6 +51,7 @@
  	export GEMINI_API_KEY=$(pass gemini.lua)
     export GEMINI_MODEL="gemini-2.5-flash"
     export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+    export SCRIPTS="$HOME/.scripts/"
 
 	export XCURSOR_THEME="Bibata-Modern-Ice"
 	# export XAUTHORITY="$HOME/.config/x11/xauthority"
@@ -154,5 +155,4 @@
     eval $(thefuck --alias)
     eval "$(zoxide init bash)"
 ##                                                                                                \\\
-export LYNX_CFG_PATH="$HOME/.config/lynx/"
 
