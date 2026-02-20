@@ -9,8 +9,8 @@
 #   TITLE : ripgreprc
 #   ABOUT : configuration file for ripgrep (rg)
 #   LINKS : https://github.com/BurntSushi/ripgrep
-#   FILES : .System
-#   TAGS  : #system #search
+#   FILES : -
+#   TAGS  : [[system]] [[search]]
 ##  ===============================================================================================
 
     # Search hidden files and directories.

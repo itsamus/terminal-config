@@ -1,1 +1,0 @@
-/home/itsamus/.help/cheatsheet-nvim.sh

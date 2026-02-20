@@ -10,7 +10,7 @@
 #   ABOUT : enviorment for the session. (login)
 #   LINKS : -
 #   FILES : -
-#   TAGS  : #system #enviorment #shell
+#   TAGS  : [[system]] [[enviorment]] [[shell]]
 ##  ===============================================================================================
 
     export XDG_CONFIG_HOME="$HOME/.config"
