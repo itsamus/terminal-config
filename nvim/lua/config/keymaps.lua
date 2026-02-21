@@ -244,3 +244,21 @@
 --  ---------------------------------------------------------------------------------------------\\\
 --  ---------------------------------------------------------------------------------------------\\\
 
+--  ---[ Colorcolumns     ]----------------------------------------------------------------------///
+    _G.colorcolumn_state = _G.colorcolumn_state or 0
+    local function toggle_colorcolumn()
+        _G.colorcolumn_state = (_G.colorcolumn_state + 1) % 3 -- Cycle 0, 1, 2
+        if _G.colorcolumn_state == 1 then
+            vim.opt.colorcolumn = "4,31,50,80"
+            print("ColorColumn: 4,31,50,80")
+        elseif _G.colorcolumn_state == 2 then
+            vim.opt.colorcolumn = "4,38,62,100"
+            print("ColorColumn: 4,38,62,100")
+        else
+            vim.opt.colorcolumn = "" -- Schakelt colorcolumn uit
+            print("ColorColumn: Uitgeschakeld")
+        end
+    end
+    vim.keymap.set('n', '<leader>cc', toggle_colorcolumn, { desc = "Toggle ColorColumn" })
+--  ---------------------------------------------------------------------------------------------\\\
+

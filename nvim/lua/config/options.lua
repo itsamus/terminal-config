@@ -106,13 +106,13 @@
     set.wildignorecase = true             --  ignore case when completing file names
 --  ---------------------------------------------------------------------------------------------\\\
 --  ---[ Cursor Setiings  ]----------------------------------------------------------------------///
-    set.guicursor = {
-        "n-v-c:block",      -- Normal, Visual, Command-line
-        "i-ci-ve:block",    -- Insert, Command-line Insert, Visual-exclusive
-        "r-cr:hor20",       -- Reaplce, Command-line Replace
-        "o:hor50",          -- Operator-pending
-        "a:blinkwait700-blinkoff400-blinkon250-Cursor/1Cursor",    -- All modes: blinking & highlight groups
-        "sm:block-blinkwait175-blinloff150-blinkon175",            -- Showmatch mode
+    vim.opt.guicursor = {
+        "n-v-c:block",                      -- Normal, Visual, Command-line: Blok
+        "i-ci-ve:ver25",                    -- Insert mode: Verticaal lijntje (25% dikte)
+        "r-cr:hor20",                       -- Replace: Horizontaal lijntje
+        "o:hor50",                          -- Operator-pending
+        "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
+        "sm:block-blinkwait175-blinkoff150-blinkon175", 
     }
 --  ---------------------------------------------------------------------------------------------\\\
 --  ---[ Fold Settings    ]----------------------------------------------------------------------///
