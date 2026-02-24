@@ -1,7 +1,7 @@
 
-#--color=always
+--color=always
 #--color=auto
---theme="itsamus-theme"
+--theme="Solarized (dark)"
 --italic-text=always
 --tabs 4
 --terminal-width 157

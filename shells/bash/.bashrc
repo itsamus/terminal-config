@@ -157,4 +157,6 @@
     eval "$(zoxide init bash)"
 ##  ---------------------------------------------------------------------------------------------\\\
 bind -x '"\C-h": fh'
+export MANPAGER="batcat -plman"
+man 2 select
 
