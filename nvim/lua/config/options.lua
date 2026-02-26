@@ -94,7 +94,7 @@
     set.errorbells = false   --  ring the bell for error messages
     set.backspace = "indent,eol,start"    --  how backspace works at start of line
     set.autochdir = false    --  change directory to the file in the current window
-    set.iskeyword:append("-")             --  characters included in keywords
+    --  set.iskeyword:append("-")             --  characters included in keywords
     set.path:append("**")    --  list of directories searched with "gf" et.al.
     set.selection = "inclusive"           --  what type of selection to use
     set.mouse = "a"          --  the use of mouse clicks
