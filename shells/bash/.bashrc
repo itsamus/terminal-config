@@ -159,4 +159,7 @@
 bind -x '"\C-h": fh'
 export MANPAGER="batcat -plman"
 man 2 select
+export TERMINAL=alacritty        # Pas dit aan naar jouw terminal (bijv. gnome-terminal, xfce4-terminal)
+export GOGH_USE_NEW_THEME=1      # Activeer het thema direct na installatie
+export GOGH_NONINTERACTIVE=1     # Geen vragen, gewoon installeren
 

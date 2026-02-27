@@ -31,66 +31,25 @@
     # Sort by file path.
     --sort=path
 
-    # Configure color settings and styles.
-    --colors=path:bg:0x3b,0x3b,0x3b
-    --colors=path:fg:white
-    --colors=line:fg:0xf2,0xc2,0x60
-    --colors=match:bg:0x2b,0x83,0xa6
-    --colors=match:fg:0xff,0xff,0xff
-    --colors=match:style:nobold
+    # Colors
+    --color=always
 
-##  ---[ COLORS           ]----------------------------------------------------------------------///
+    --colors=path:fg:78
+    # --colors=path:bg: [...]
 
-#        --color <WHEN>
-#            This flag controls when to use colors. The default setting is 'auto', which
-#            means ripgrep will try to guess when to use colors. For example, if ripgrep is
-#            printing to a terminal, then it will use colors, but if it is redirected to a
-#            file or a pipe, then it will suppress color output. ripgrep will suppress color
-#            output in some other circumstances as well. For example, if the TERM
-#            environment variable is not set or set to 'dumb', then ripgrep will not use
-#            colors.
-#
-#            The possible values for this flag are:
-#
-#                never    Colors will never be used.
-#                auto     The default. ripgrep tries to be smart.
-#                always   Colors will always be used regardless of where output is sent.
-#                ansi     Like 'always', but emits ANSI escapes (even in a Windows console).
-#
-#            When the --vimgrep flag is given to ripgrep, then the default value for the
-#            --color flag changes to 'never'.
-#        --colors <COLOR_SPEC>...
-#            This flag specifies color settings for use in the output. This flag may be
-#            provided multiple times. Settings are applied iteratively. Colors are limited
-#            to one of eight choices: red, blue, green, cyan, magenta, yellow, white and
-#            black. Styles are limited to nobold, bold, nointense, intense, nounderline
-#            or underline.
-#
-#            The format of the flag is '{type}:{attribute}:{value}'. '{type}' should be
-#            one of path, line, column or match. '{attribute}' can be fg, bg or style.
-#            '{value}' is either a color (for fg and bg) or a text style. A special format,
-#            '{type}:none', will clear all color settings for '{type}'.
-#
-#            For example, the following command will change the match color to magenta and
-#            the background color for line numbers to yellow:
-#
-#                rg --colors 'match:fg:magenta' --colors 'line:bg:yellow' foo.
-#
-#            Extended colors can be used for '{value}' when the terminal supports ANSI color
-#            sequences. These are specified as either 'x' (256-color) or 'x,x,x' (24-bit
-#            truecolor) where x is a number between 0 and 255 inclusive. x may be given as
-#            a normal decimal number or a hexadecimal number, which is prefixed by `0x`.
-#
-#            For example, the following command will change the match background color to
-#            that represented by the rgb value (0,128,255):
-#
-#                rg --colors 'match:bg:0,128,255'
-#
-#            or, equivalently,
-#
-#                rg --colors 'match:bg:0x0,0x80,0xFF'
-#
-#            Note that the the intense and nointense style flags will have no effect when
-#            used alongside these extended color codes.
-##  ---------------------------------------------------------------------------------------------\\\
+    --colors=line:fg:72
+    # --colors=line:bg: [...]
+    
+    --colors=match:fg:167 
+    --colors=match:style:bold 
+
+
+
+
+
+
+    # --colors=match:bg:0x2b,0x83,0xa6
+    # --colors=match:fg:0xff,0xff,0xff
+    # --colors=match:style:nobold
+
 

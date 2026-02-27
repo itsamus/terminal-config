@@ -78,4 +78,7 @@
 #    export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f --type l $FD_OPTIONS"
 export EZA_COLORS="di=3;38;5;21:ex=38;5;46:fi=38;5;250:ln=3;38;5;165:or=1;38;5;16;48;5;197:ur=38;5;240:uw=38;5;250:ux=38;5;196:ue=38;5;196:gr=38;5;240:gw=38;5;250:gx=38;5;196:tr=38;5;240:tw=38;5;250:tx=38;5;196:lp=38;5;201"
 
+export TERMINAL=alacritty
+printf '\e]11;#000000\a'
 
+. "/home/itsamus/.deno/env"
