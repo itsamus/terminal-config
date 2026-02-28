@@ -42,6 +42,7 @@
         void="$HOME/void" \
         box="boxes -d html" \
         weer="curl wttr.in/Edam" \
+        diff="diff -sEBwZby --color=auto " \
         nali="nvim $XDG_CONFIG_HOME/aliasrc" \
         gemini="cd ~ ; nvm use 20 ; gemini && cd -" \
         syscheat="nvim $HOME/.help/cheatsheet-system-cmds.sh" \

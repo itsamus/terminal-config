@@ -162,4 +162,89 @@ man 2 select
 export TERMINAL=alacritty        # Pas dit aan naar jouw terminal (bijv. gnome-terminal, xfce4-terminal)
 export GOGH_USE_NEW_THEME=1      # Activeer het thema direct na installatie
 export GOGH_NONINTERACTIVE=1     # Geen vragen, gewoon installeren
+# download_mp3() {
+#   if [ $# -eq 0 ]; then
+#     echo "Gebruik: download_mp3 <URL> [mapnaam]"
+#     return 1
+#   fi
+#
+#   local URL="${1}"
+#   local DIR="${2}"
+#   local COVER_SIZE=1024
+#   # Hier vertellen we Python direct waar je certificaten staan:
+#   export REQUESTS_CA_BUNDLE="/home/itsamus/.tmp/python-certifi-master/certifi/cacert.pem"
+#   export SSL_CERT_FILE="/home/itsamus/.tmp/python-certifi-master/certifi/cacert.pem"
+#
+#   if [[ -n "$DIR" ]]; then
+#     mkdir -p "$DIR" && cd "$DIR" || return 1
+#   fi
+#
+#   yt-dlp \
+#     --write-thumbnail \
+#     --convert-thumbnails jpg \
+#     --embed-thumbnail \
+#     --ppa "EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf '[0:v]split=2[blur][vid];[blur]scale=$COVER_SIZE:$COVER_SIZE:force_original_aspect_ratio=increase,crop=$COVER_SIZE:$COVER_SIZE,boxblur=luma_radius=min(h\,w)/20:luma_power=1:chroma_radius=min(cw\,ch)/20:chroma_power=1[bg];[vid]scale=$COVER_SIZE:$COVER_SIZE:force_original_aspect_ratio=decrease[ov];[bg][ov]overlay=(W-w)/2:(H-h)/2'" \
+#     --extract-audio \
+#     --audio-format mp3 \
+#     --audio-quality 320K \
+#     --embed-metadata \
+#     "$URL"
+#
+#   if [[ -n "$DIR" ]]; then
+#     cd - > /dev/null
+#   fi
+#
+#   # Optioneel: ruim de variabelen weer op na gebruik
+#   unset REQUESTS_CA_BUNDLE
+#   unset SSL_CERT_FILE
+# }
+#
+# download_mp3() {
+#     yt-dlp --js-runtimes "deno:/home/itsamus/.deno/bin/deno" \
+#         --no-playlist \
+#         --extract-audio \
+#         --audio-format m4a \
+#         --write-subs \
+#         --write-auto-subs \
+#         --sub-langs "en" \
+#         --convert-subs lrc \
+#         --add-metadata \
+#         --parse-metadata "title:%(artist,uploader)s - %(title)s" \
+#         --replace-in-metadata "title" " \(.*?\)" "" \
+#         --replace-in-metadata "title" " - " "-" \
+#         --replace-in-metadata "title" " " "_" \
+#         --embed-thumbnail \
+#         --convert-thumbnails jpg \
+#         -o "home:~/music/" \
+#         -o "audio:%(title)s.%(ext)s" \
+#         -o "subtitle:%(title)s.%(ext)s" \
+#         --exec "post_process:sed -i '1i [ar:%(artist,uploader)s]\n[ti:%(title)s]\n[al:%(album,playlist_title)s]' \"\${HOME}/music/%(title)s.lrc\"" \
+#         --no-keep-video \
+#         --download-archive archive.txt \
+#         "$1"
+# }
+
+download_mp3() {
+    yt-dlp --js-runtimes "deno:/home/itsamus/.deno/bin/deno" \
+        --no-playlist \
+        --extract-audio \
+        --audio-format m4a \
+        --write-auto-subs \
+        --sub-langs "en" \
+        --convert-subs lrc \
+        --add-metadata \
+        --sleep-subtitles 2 \
+        --replace-in-metadata "title" " \(.*?\)" "" \
+        --replace-in-metadata "title" " - " "-" \
+        --replace-in-metadata "title" " " "_" \
+        --embed-thumbnail \
+        --convert-thumbnails jpg \
+        -o "home:~/music/" \
+        -o "%(title)s.%(ext)s" \
+        --exec "post_process:find ~/music/ -name '%(title)s.*.lrc' -exec mv {} ~/music/%(title)s.lrc \; 2>/dev/null" \
+        --exec "post_process:if [ -f ~/music/%(title)s.lrc ]; then sed -i '1i [ar:%(artist,uploader)s]\n[ti:%(title)s]\n[al:%(album,playlist_title)s]' ~/music/%(title)s.lrc; fi" \
+        --no-keep-video \
+        --download-archive archive.txt \
+        "$1"
+}
 
